@@ -8,6 +8,6 @@ deploy:
   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep_history: true
   on:
-    branch: master
+    branch: main
 notifications:
    webhooks: https://oapi.dingtalk.com/robot/send?access_token=f6ecbb209c2f1fc280a9d4e7e9f2e4cb51b1177ba65e68f94727127b86eb3178
