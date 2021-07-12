@@ -1,0 +1,13 @@
+language: python
+sudo: required
+install: pip install requests
+script: python wx.py
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: main
+notifications:
+   webhooks: https://oapi.dingtalk.com/robot/send?access_token=f6ecbb209c2f1fc280a9d4e7e9f2e4cb51b1177ba65e68f94727127b86eb3178

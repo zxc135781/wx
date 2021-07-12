@@ -1,0 +1,23 @@
+cb({
+	arm32: {
+		url:"https://dldir1.qq.com/weixin/android/weixin807android1900_0x28000730.apk", //随便改
+		md5:"18056450b6e71648365a859ad67916c3", //记得更新
+		versionName:"8.0.7",
+		version:"671090480", //clientVersion 10进展，记得更新
+		direct:1, //是否不经确认就下载包
+		textList:["解决了一些已知问题。"], //本次更新
+		recentList:[] //最近更新
+	},	// 32位安装包配置，格式与之前一致
+
+	arm64: {
+		url:"https://dldir1.qq.com/weixin/android/weixin807android1900_0x28000731_arm64.apk", //随便改
+		md5:"57eb398902d41bc08367c7692ef22d51", //记得更新
+		versionName:"8.0.7",
+		version:"671090481", //clientVersion 10进展，记得更新
+		direct:1, //是否不经确认就下载包
+		textList:["解决了一些已知问题。"], //本次更新
+		recentList:[] //最近更新
+	},	//64位安装包配置，格式与之前一致
+
+	random:1.0  //如果支持64位，出64位安装包的概率
+})
