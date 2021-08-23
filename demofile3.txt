@@ -1,19 +1,19 @@
 cb({
 	arm32: {
-		url:"https://dldir1.qq.com/weixin/android/weixin8011android1960_0x28000b10.apk", //随便改
-		md5:"7ab698f461040887f1eb7fafbedf84a2", //记得更新
+		url:"https://dldir1.qq.com/weixin/android/weixin8011android1960_0x28000b32.apk", //随便改
+		md5:"310131a7a38a25b7f54954a4d57bee83", //记得更新
 		versionName:"8.0.11",
-		version:"671091472", //clientVersion 10进展，记得更新
+		version:"671091506", //clientVersion 10进展，记得更新
 		direct:1, //是否不经确认就下载包
 		textList:["优化了一些已知问题。"], //本次更新
 		recentList:["可以设置个性来电铃声和消息提示音。", "可以在消息免打扰的群里，关注特定群成员。", "可以在电脑、平板等设备同时登录同一个微信号。"] //最近更新
 	},	// 32位安装包配置，格式与之前一致
 
 	arm64: {
-		url:"https://dldir1.qq.com/weixin/android/weixin8011android1960_0x28000b11_arm64.apk", //随便改
-		md5:"25c30fae5c8616a015f7b16c44ec8b38", //记得更新
+		url:"https://dldir1.qq.com/weixin/android/weixin8011android1960_0x28000b33_arm64.apk", //随便改
+		md5:"f27b7768cb178227fedbd8f8e99bef8d", //记得更新
 		versionName:"8.0.11",
-		version:"671091473", //clientVersion 10进展，记得更新
+		version:"671091507", //clientVersion 10进展，记得更新
 		direct:1, //是否不经确认就下载包
 		textList:["优化了一些已知问题。"], //本次更新
 		recentList:["可以设置个性来电铃声和消息提示音。", "可以在消息免打扰的群里，关注特定群成员。", "可以在电脑、平板等设备同时登录同一个微信号。"] //最近更新
