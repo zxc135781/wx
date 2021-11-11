@@ -10,4 +10,4 @@ deploy:
   on:
     branch: main
 notifications:
-   webhooks: https://oapi.dingtalk.com/robot/send?access_token=f6ecbb209c2f1fc280a9d4e7e9f2e4cb51b1177ba65e68f94727127b86eb3178
+   webhooks: https://oapi.dingtalk.com/robot/send?access_token=6021752e6634433d80d809f8c07c993911ebd973122b5559f61f36bb7e30b799
