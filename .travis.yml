@@ -10,4 +10,4 @@ deploy:
   on:
     branch: main
 notifications:
-   webhooks: $dingding_token
+   webhooks: $DINGDING_TOKEN
