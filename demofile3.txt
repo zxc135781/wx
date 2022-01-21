@@ -1,25 +1,23 @@
 cb({
 	arm32: {
-		url:"https://dldir1.qq.com/weixin/android/weixin8016android2040_0x280010D6.apk",
-		md5:"26f0f868be6bd7dcac7687f6127ef20e",
-		versionName:"8.0.16",
-		version:"671092950",
-		direct:1,
-		textList:["targetSdkVersion 30 适配。"],
-		recentList:["可以设置个性来电铃声和消息提示音。", "可以在消息免打扰的群里，关注特定群成员。", "可以在电脑、平板等设备同时登录同一个微信号。"] 
-	},	
+		url:"https://dldir1.qq.com/weixin/android/weixin8019android2060_0x28001310.apk", //随便改
+		md5:"80e9405ecfd4b35c210d36fca0eeb8b9", //记得更新
+		versionName:"8.0.19",
+		version:"671093520", //clientVersion 10进展，记得更新
+		direct:1, //是否不经确认就下载包
+		textList:["优化了一些已知问题."], //本次更新
+		recentList:["可以设置个性来电铃声和消息提示音。", "可以在消息免打扰的群里，关注特定群成员。", "可以在电脑、平板等设备同时登录同一个微信号。"] //最近更新
+	},	// 32位安装包配置，格式与之前一致
 
 	arm64: {
-		url:"https://dldir1.qq.com/weixin/android/weixin8016android2040_0x280010D6_arm64.apk",
-		md5:"d84468fa022d13f6316dada3be380982",
-		versionName:"8.0.16",
-		version:"671092950",
-		direct:1,
-		textList:["targetSdkVersion 30适配。"], 
-		recentList:["可以设置个性来电铃声和消息提示音。", "可以在消息免打扰的群里，关注特定群成员。", "可以在电脑、平板等设备同时登录同一个微信号。"]
-	},	
+		url:"https://dldir1.qq.com/weixin/android/weixin8019android2060_0x28001311_arm64.apk", //随便改
+		md5:"ef7eb044f01435995a150a5b9b12e3eb", //记得更新
+		versionName:"8.0.19",
+		version:"671093521", //clientVersion 10进展，记得更新
+		direct:1, //是否不经确认就下载包
+		textList:["优化了一些已知问题."], //本次更新
+		recentList:["可以设置个性来电铃声和消息提示音。", "可以在消息免打扰的群里，关注特定群成员。", "可以在电脑、平板等设备同时登录同一个微信号。"] //最近更新
+	},	//64位安装包配置，格式与之前一致
 
-	random:1.0  //如果支持64位，出64位安装包的概率,
-    title: "安卓微信测试版下载",
-    title1: "安卓微信测试版下载"
+	random:1.0  //如果支持64位，出64位安装包的概率
 })
