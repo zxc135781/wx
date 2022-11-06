@@ -1,19 +1,19 @@
 cb({
 	arm32: {
-		url:"https://dldir1.qq.com/weixin/android/weixin8030android2240_0x28001e30.apk", //随便改
-		md5:"63e8c1c0ec161ae7e59c695eb7de8d81", //记得更新
+		url:"https://dldir1.qq.com/weixin/android/weixin8030android2240_0x28001e32.apk", //随便改
+		md5:"8b1b7f64af680a3d90db6ccee6b2d0e0", //记得更新
 		versionName:"8.0.30",
-		version:"671096368", //clientVersion 10进展，记得更新
+		version:"671096370", //clientVersion 10进展，记得更新
 		direct:1, //是否不经确认就下载包
 		textList:["优化了一些已知问题."], //本次更新
 		recentList:[] //最近更新
 	},	// 32位安装包配置，格式与之前一致
 
 	arm64: {
-		url:"https://dldir1.qq.com/weixin/android/weixin8030android2240_0x28001e31_arm64.apk", //随便改
-		md5:"3436423c13706e82354d05bebe7183a7", //记得更新
+		url:"https://dldir1.qq.com/weixin/android/weixin8030android2240_0x28001e33_arm64.apk", //随便改
+		md5:"7c350dfe577f869cbafe5756501d30a8", //记得更新
 		versionName:"8.0.30",
-		version:"671096369", //clientVersion 10进展，记得更新
+		version:"671096371", //clientVersion 10进展，记得更新
 		direct:1, //是否不经确认就下载包
 		textList:["优化了一些已知问题."], //本次更新
 		recentList:[] //最近更新
