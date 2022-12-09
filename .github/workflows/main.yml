@@ -15,7 +15,14 @@ jobs:
         python-version: '3.10' 
     - run: pip install requests
     - run: python wx.py
-    - uses: actions/upload-artifact@v3
+    - name: commit
+      run: |
+        git config --global user.email 827169070@qq.com
+        git config --global user.name zxc135781
+        git add .
+        git commit -m "update" -a
+        
+    - name: Push changes
+      uses: ad-m/github-push-action@master
       with:
-        name: my-artifact
-        path: . # or path/to/artifact
+        github_token: ${{ secrets.GITHUB_TOKEN }}
