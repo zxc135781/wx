@@ -16,14 +16,8 @@ jobs:
         python-version: '3.10' 
     - run: pip install requests
     - run: python wx.py
-    - name: commit
-      run: |
-        git config --global user.email 827169070@qq.com
-        git config --global user.name zxc135781
-        git add .
-        git commit -m "update" -a
-        
-    - name: Push changes
-      uses: ad-m/github-push-action@master
+
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        folder: .
