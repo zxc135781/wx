@@ -2,6 +2,8 @@ name: Build and Deploy
 on:
   schedule:
       - cron: '30 23 * * *'
+  watch:
+      types: started
 
 jobs:
   build:
