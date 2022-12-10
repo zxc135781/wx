@@ -15,7 +15,7 @@ jobs:
       with:
         python-version: '3.10' 
         cache: 'pip'
-    - run: install -r requirements.txt
+    - run: pip install -r requirements.txt
     - run: python wx.py
 
     - name: Deploy 🚀
