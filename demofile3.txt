@@ -10,10 +10,10 @@ cb({
 	},	// 32位安装包配置，格式与之前一致
 
 	arm64: {
-		url:"https://dldir1.qq.com/weixin/android/weixin8044android2480_0x28002c31_arm64.apk", //随便改
-		md5:"ac14b6b5f5d5b5016411011be7fe1d97", //记得更新
+		url:"https://dldir1.qq.com/weixin/android/weixin8044android2502_0x28002c89_arm64.apk", //随便改
+		md5:"f47d30197cccf270853ca618c7f0a6ef", //记得更新
 		versionName:"8.0.44",
-		version:"671099953", //clientVersion 10进展，记得更新
+		version:"671100041", //clientVersion 10进展，记得更新
 		direct:1, //是否不经确认就下载包
 		textList:["优化了一些已知问题."], //本次更新
 		recentList:["可以设置个性来电铃声和消息提示音。", "可以在消息免打扰的群里，关注特定群成员。", "可以在电脑、平板等设备同时登录同一个微信号。"] //最近更新
