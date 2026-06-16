@@ -46,6 +46,9 @@ jobs:
         echo "Downloading $APK_NAME..."
         curl -L -o "$APK_NAME" "$ARM64_URL"
 
+        FILE_MD5=$(md5sum "$APK_NAME" | awk '{print $1}')
+        EXPECTED_MD5=$(python3 -c "import json; d=json.load(open('config.json')); print(d['arm64']['md5'])")
+
         NOTES=$(python3 -c "
         import json
         d = json.load(open('config.json'))
@@ -62,6 +65,12 @@ jobs:
                 lines.append(f'- {r}')
         print('\n'.join(lines))
         ")
+
+        NOTES="${NOTES}
+
+        ## 校验信息
+        - 配置文件 MD5: ${EXPECTED_MD5}
+        - 实际文件 MD5: ${FILE_MD5}"
 
         gh release create "$TAG" \
           --title "微信 $TAG" \
