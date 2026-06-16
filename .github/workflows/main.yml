@@ -6,6 +6,9 @@ on:
       types: started
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,7 +17,7 @@ jobs:
     - uses: actions/checkout@v4
     - uses: actions/setup-python@v5
       with:
-        python-version: '3.10' 
+        python-version: '3.10'
         cache: 'pip'
     - run: pip install -r requirements.txt
     - run: python wx.py
@@ -23,3 +26,47 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: .
+
+    - name: Download APKs and Release
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        VERSION_NAME=$(python3 -c "import json; d=json.load(open('config.json')); print(d['arm64']['versionName'])")
+        VERSION=$(python3 -c "import json; d=json.load(open('config.json')); print(d['arm64']['version'])")
+        TAG="${VERSION_NAME}_${VERSION}"
+
+        if gh release view "$TAG" >/dev/null 2>&1; then
+          echo "Release $TAG already exists, skipping"
+          exit 0
+        fi
+
+        ARM32_URL=$(python3 -c "import json; d=json.load(open('config.json')); print(d['arm32']['url'])")
+        ARM64_URL=$(python3 -c "import json; d=json.load(open('config.json')); print(d['arm64']['url'])")
+
+        echo "Downloading arm32 APK..."
+        curl -L -o "weixin_${TAG}_arm32.apk" "$ARM32_URL"
+        echo "Downloading arm64 APK..."
+        curl -L -o "weixin_${TAG}_arm64.apk" "$ARM64_URL"
+
+        NOTES=$(python3 -c "
+        import json
+        d = json.load(open('config.json'))
+        texts = d['arm64'].get('textList', [])
+        recents = d['arm64'].get('recentList', [])
+        lines = []
+        if texts:
+            lines.append('## 本次更新')
+            for t in texts:
+                lines.append(f'- {t}')
+        if recents:
+            lines.append('## 最近更新')
+            for r in recents:
+                lines.append(f'- {r}')
+        print('\n'.join(lines))
+        ")
+
+        gh release create "$TAG" \
+          --title "微信 $TAG" \
+          --notes "$NOTES" \
+          "weixin_${TAG}_arm32.apk#arm32 APK" \
+          "weixin_${TAG}_arm64.apk#arm64 APK"
