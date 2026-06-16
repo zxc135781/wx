@@ -27,7 +27,7 @@ jobs:
       with:
         folder: .
 
-    - name: Download APKs and Release
+    - name: Download APK and Release
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
@@ -40,11 +40,8 @@ jobs:
           exit 0
         fi
 
-        ARM32_URL=$(python3 -c "import json; d=json.load(open('config.json')); print(d['arm32']['url'])")
         ARM64_URL=$(python3 -c "import json; d=json.load(open('config.json')); print(d['arm64']['url'])")
 
-        echo "Downloading arm32 APK..."
-        curl -L -o "weixin_${TAG}_arm32.apk" "$ARM32_URL"
         echo "Downloading arm64 APK..."
         curl -L -o "weixin_${TAG}_arm64.apk" "$ARM64_URL"
 
@@ -68,5 +65,4 @@ jobs:
         gh release create "$TAG" \
           --title "微信 $TAG" \
           --notes "$NOTES" \
-          "weixin_${TAG}_arm32.apk#arm32 APK" \
           "weixin_${TAG}_arm64.apk#arm64 APK"
