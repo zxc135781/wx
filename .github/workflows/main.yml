@@ -41,9 +41,10 @@ jobs:
         fi
 
         ARM64_URL=$(python3 -c "import json; d=json.load(open('config.json')); print(d['arm64']['url'])")
+        APK_NAME=$(basename "$ARM64_URL")
 
-        echo "Downloading arm64 APK..."
-        curl -L -o "weixin_${TAG}_arm64.apk" "$ARM64_URL"
+        echo "Downloading $APK_NAME..."
+        curl -L -o "$APK_NAME" "$ARM64_URL"
 
         NOTES=$(python3 -c "
         import json
@@ -65,4 +66,4 @@ jobs:
         gh release create "$TAG" \
           --title "微信 $TAG" \
           --notes "$NOTES" \
-          "weixin_${TAG}_arm64.apk#arm64 APK"
+          "$APK_NAME"
