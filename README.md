@@ -26,7 +26,7 @@ python wx.py
 
 ## 输出示例
 
-输出为 JSON 格式，包含微信 Android 版的更新配置信息，如：
+输出为 JSONP 格式（`cb({...})`），包含微信 Android 版的更新配置信息，如：
 
 - APK 下载地址
 - 版本号
