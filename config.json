@@ -1,0 +1,30 @@
+{
+  "arm32": {
+    "url": "https://dldir1.qq.com/weixin/android/weixin8041android2420_0x28002910.apk",
+    "md5": "41ba786f6bbb2a2be5223fa996f1d99b",
+    "versionName": "8.0.41",
+    "version": "671099152",
+    "textList": [
+      "优化了一些已知问题."
+    ],
+    "recentList": [
+      "可以设置个性来电铃声和消息提示音。",
+      "可以在消息免打扰的群里，关注特定群成员。",
+      "可以在电脑、平板等设备同时登录同一个微信号。"
+    ]
+  },
+  "arm64": {
+    "url": "https://dldir1v6.qq.com/weixin/android/weixin8074android3120_0x28004a34_arm64.apk",
+    "md5": "15a999b33de3eea7b02bd2e96864bfd8",
+    "versionName": "8.0.74",
+    "version": "671107636",
+    "textList": [
+      "优化了一些已知问题."
+    ],
+    "recentList": [
+      "可以设置个性来电铃声和消息提示音。",
+      "可以在消息免打扰的群里，关注特定群成员。",
+      "可以在电脑、平板等设备同时登录同一个微信号。"
+    ]
+  }
+}
