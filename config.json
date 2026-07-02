@@ -14,10 +14,10 @@
     ]
   },
   "arm64": {
-    "url": "https://dldir1v6.qq.com/weixin/android/weixin8076android3120_0x28004c13_arm64.apk",
-    "md5": "61ba70f2c536bd06171442a4545604e1",
+    "url": "https://dldir1v6.qq.com/weixin/android/weixin8076android3120_0x28004c15_arm64.apk",
+    "md5": "6698e133e73c53aed5f153f25ef667db",
     "versionName": "8.0.76",
-    "version": "671108115",
+    "version": "671108117",
     "textList": [
       "优化了一些已知问题."
     ],
