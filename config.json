@@ -14,10 +14,10 @@
     ]
   },
   "arm64": {
-    "url": "https://dldir1v6.qq.com/weixin/android/weixin8077android3141_0x28004d19_arm64.apk",
-    "md5": "e67cd98459a7f386c5f3b41fa62429d1",
+    "url": "https://dldir1v6.qq.com/weixin/android/weixin8077android3141_0x28004d1a_arm64.apk",
+    "md5": "e42696241c40a3432a24b0c4a9ee3e7e",
     "versionName": "8.0.77",
-    "version": "671108377",
+    "version": "671108378",
     "textList": [
       "优化了一些已知问题."
     ],
